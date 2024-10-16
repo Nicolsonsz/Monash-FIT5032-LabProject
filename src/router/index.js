@@ -12,73 +12,72 @@ import AccessDenied from '../views/AccessDeniedView.vue'
 import FireLogin from '../views/FirebaseLoginView.vue'
 import FireRegister from '../views/FirebaseRegisterView.vue'
 
-const routes = [
-  {
-    path: '/',
-    name: 'Home',
-    component: HomeView
-  },
-  {
-    path: '/about',
-    name: 'About',
-    component: AboutView,
-    meta: { requiresAuth: true }
-  },
-  {
-    path: '/addbook',
-    name: 'AddBook',
-    component: AddBookView,
-  },
-  {
-    path: '/GetBookCount',
-    name: 'GetBookCount',
-    component: GetBookCount,
-  },
-  {
-    path: '/WeatherCheck',
-    name: 'WeatherCheck',
-    component: WeatherView,
-  },
-  {
-    path: '/CountBookAPI',
-    name: 'CountBookAPI',
-    component: CountBookAPI,
-  },
-  {
-    path: '/GetAllBookAPI',
-    name: 'GetAllBookAPI',
-    component: GetAllBookAPI,
-  },
-  {
-    path: '/login',
-    name: 'Login',
-    component: Login
-  },
-  {
-    path: '/logout',
-    name: 'Logout',
-    component: Logout
-  },
-  {
-    path: '/FireLogin',
-    name: 'FireLogin',
-    component: FireLogin
-  },
-  {
-    path: '/FireRegister',
-    name: 'FireRegister',
-    component: FireRegister
-  },
-  {
-    path: '/access-denied',
-    name: 'AccessDenied',
-    component: AccessDenied
-  }
-]
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes
+  routes: [
+    {
+      path: '/',
+      name: 'Home',
+      component: HomeView
+    },
+    {
+      path: '/about',
+      name: 'About',
+      component: AboutView,
+      meta: { requiresAuth: true }
+    },
+    {
+      path: '/addbook',
+      name: 'AddBook',
+      component: AddBookView,
+    },
+    {
+      path: '/GetBookCount',
+      name: 'GetBookCount',
+      component: GetBookCount,
+    },
+    {
+      path: '/WeatherCheck',
+      name: 'WeatherCheck',
+      component: WeatherView,
+    },
+    {
+      path: '/CountBookAPI',
+      name: 'CountBookAPI',
+      component: CountBookAPI,
+    },
+    {
+      path: '/GetAllBookAPI',
+      name: 'GetAllBookAPI',
+      component: GetAllBookAPI,
+    },
+    {
+      path: '/login',
+      name: 'Login',
+      component: Login
+    },
+    {
+      path: '/logout',
+      name: 'Logout',
+      component: Logout
+    },
+    {
+      path: '/FireLogin',
+      name: 'FireLogin',
+      component: FireLogin
+    },
+    {
+      path: '/FireRegister',
+      name: 'FireRegister',
+      component: FireRegister
+    },
+    {
+      path: '/access-denied',
+      name: 'AccessDenied',
+      component: AccessDenied
+    }
+  ]
 })
 
 router.beforeEach((to, from, next) => {
