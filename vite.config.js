@@ -20,7 +20,9 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 //   : '/'
 // })
 export default defineConfig({
-  base: '',
+  base: process.env.NODE_ENV === 'production'
+  ? '/Monash-FIT5032-LabProject/'
+  : '/',
   build: {
     outDir: 'dist'
   },
